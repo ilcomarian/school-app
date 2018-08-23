@@ -1,0 +1,8 @@
+<%= form_with model:   @curent_student  do |form| %>
+    <%= form.text_field :first_name, placeholder: "form.first_name"%>
+    <%= form.text_field :last_name, placeholder: "form.last_name"%>
+    <%= form.text_field :age, placeholder: "form.age"%>
+    <%= form.text_field :cohort_id, placeholder: "form.cohort_id"%>
+    <%= form.submit %>
+<% end %>
+

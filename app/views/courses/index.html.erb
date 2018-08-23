@@ -1,0 +1,8 @@
+<% @courses.each do |cours| %>
+    <h1> Cours Id: <%= cours.id %> </h1>
+   <h1> <%= cours.name %>  </h1>
+   <h1> <%= cours.total_hours %> </h1>
+    <h1>  <a href=" /courses/<%=cours.id%>/edit">Edit</a></h1>
+   <hr>
+<% end %>
+ 

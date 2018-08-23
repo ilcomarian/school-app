@@ -1,0 +1,5 @@
+<%= form_with model:   @courses  do |form| %>
+    <%= form.text_field :name, placeholder: "name"%>
+    <%= form.text_field :total_hours, placeholder: "total_hours"%>
+    <%= form.submit %>
+<% end %>

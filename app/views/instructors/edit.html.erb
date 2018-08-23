@@ -1,0 +1,14 @@
+<%= form_with model:   @curent_instructor  do |form| %>
+    <%= form.text_field :first_name, placeholder: "form.first_name"%>
+    <%= form.text_field :last_name, placeholder: "last_name"%>
+    <%= form.text_field :age, placeholder: " age"%>
+    <%= form.text_field :salary, placeholder: "salary"%>
+    <select name="<%=:completed_education%>" id="post_author_id">
+  <option value="">Please select</option>
+  <option value="1" selected="selected">D. Heinemeier Hansson</option>
+  <option value="2">D. Thomas</option>
+  <option value="3">M. Clark</option>
+</select>
+   
+    <%= form.submit %>
+<% end %>

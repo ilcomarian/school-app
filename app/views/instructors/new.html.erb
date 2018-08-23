@@ -1,0 +1,9 @@
+<%= form_with model: Instructor.new do |form| %>
+    <%= form.text_field :first_name, placeholder: "Enter first_name"%>
+    <%= form.text_field :last_name, placeholder: "Enter last_name"%>
+    <%= form.text_field :age, placeholder: "Enter age"%>
+    <%= form.text_field :salary, placeholder: "Enter salary"%>
+    <%= form.text_field :completed_education, placeholder: "Enter completed_education"%>
+    <%= form.submit %>
+<% end %>
+ 

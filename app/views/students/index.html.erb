@@ -1,0 +1,8 @@
+<% @students.each do |single_student| %>
+    <h1> Student Id: <%= single_student.id %> </h1>
+   <h1> <%= single_student.first_name %> <%= single_student.last_name %>  </h1>
+   <h1> <%= single_student.age %> </h1>
+   <h1> <%= single_student.cohort_id %> </h1>
+    <h1>  <a href=" /students/<%=single_student.id%>/edit">Edit</a></h1>
+   <hr>
+<% end %>
