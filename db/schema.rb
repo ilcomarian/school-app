@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2018_08_21_170957) do
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
-    t.string "total_hours"
+    t.integer "total_hours"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2018_08_21_170957) do
     t.integer "age"
     t.integer "salary"
     t.string "completed_education"
+    t.integer "cohort_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

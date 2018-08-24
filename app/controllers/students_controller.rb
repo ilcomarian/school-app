@@ -21,7 +21,7 @@ class StudentsController < ApplicationController
     def edit
 
         @curent_student = Student.find(params[:id])
-    
+        @cohort = Cohort.all 
     end
 
     def update
@@ -29,7 +29,7 @@ class StudentsController < ApplicationController
         @curent_student = Student.find(params[:id])
         @curent_student.update(student_params)
         redirect_to students_path
-        
+
     end
 
     def destroy

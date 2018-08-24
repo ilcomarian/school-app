@@ -1,12 +1,16 @@
+<div class="card-deck">
+
 <% @instructor.each do |instructor| %>
+<div class="card" style="width: 10rem;">
     <h1> Instructor Id: <%= instructor.id %> </h1>
-   <h1> <%= instructor.first_name %> <%= instructor.last_name %>  </h1>
-   <h1> <%= instructor.age %> </h1>
-   <h1> <%= instructor.salary %> </h1>
-   <h1> <%= instructor.completed_education %> </h1>
+   <h1> Full Name:<%= instructor.first_name %> <%= instructor.last_name %>  </h1>
+   <h1> Age:<%= instructor.age %> </h1>
+   <h1> Salary:<%= instructor.salary %> </h1>
+   <h1> Completed_education: <%= instructor.completed_education %> </h1>
+   <h1> Cohort_id: <%= instructor.cohort_id    %> </h1>
     <h1>  <a href=" /instructors/<%=instructor.id%>/edit">Edit</a></h1>
-   <hr>
+   </div>
 <% end %>
 
 
- 
+ </div>

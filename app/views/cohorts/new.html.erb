@@ -2,7 +2,7 @@
     <%= form.text_field :name, placeholder: "Enter name"%>
     <%= form.text_field :start_date, placeholder: "Enter start_date"%>
     <%= form.text_field :end_date, placeholder: "Enter end_date"%>
-    <%= form.text_field :instructor_id, placeholder: "Enter instructor_id"%>
-    <%= form.text_field :course_id, placeholder: "Enter course_id"%>
+    <%= form.select :instructor_id,  Instructor.all.map {|x| [x.first_name,x.id ]}%>
+    <%= form.select :course_id,  Course.all.map {|x| [x.name,x.id ]}%>
     <%= form.submit %>
 <% end %>
