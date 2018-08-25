@@ -1,12 +1,37 @@
+
+<table class="table table-dark mx-auto w-75 " style ="margin-top:10%">
+ <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">start_date</th>
+      <th scope="col">end_date</th>
+      <th scope="col">instructor_id</th>
+      <th scope="col">course_id</th>
+      <th scope="col">edit</th>
+      <th scope="col">delete</th>
+    </tr>
+  </thead>
+<tbody>
+<tr>
+
 <% @cohorts.each do |cohort| %>
-    <h1> Cohort Id: <%= cohort.id %> </h1>
-   <h1> <%= cohort.name %>  </h1>
-   <h1> <%= cohort.start_date %> </h1>
-   <h1> <%= cohort.end_date %> </h1>
-   <h1> <%= cohort.instructor_id %> </h1>
-   <h1> <%= cohort.course_id %> </h1>
-   <h1>  <a href="/cohorts/<%=cohort.id%>/edit">Edit</a></h1>
-   <h1>  <a href="/students/<%=cohort.id%>">All students</a></h1>
-    
-   <hr>
+ <tr>
+   <td> <%= cohort.id %> </td>
+   <td> <%= cohort.name %>  </td>
+   <td> <%= cohort.start_date %> </td>
+   <td> <%= cohort.end_date %> </td>
+   <td> <%= cohort.instructor_id %> </td>
+   <td> <%= cohort.course_id %> </td>
+   <td>  <a href="/cohorts/<%=cohort.id%>/edit">Edit</a></td>
+   <td>  <a href="/students/<%=cohort.id%>">delete</a></td>
+   </tr>
+ 
 <% end %>
+
+
+</tr>
+ </tbody>
+</table>
+
+ </div>

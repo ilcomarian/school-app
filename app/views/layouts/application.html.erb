@@ -10,10 +10,21 @@
   </head>
 
   <body>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+  <nav class="navbar navbar-dark bg-dark">
+ 
     <h1>  <a href="/students">All students</a></h1>
     <h1>  <a href="/cohorts">All cohorts</a></h1>
     <h1>  <a href="/instructors">All instructors</a></h1>
      <h1>  <a href="/courses">All courses</a></h1>
+     </nav>
+      <nav class="navbar navbar-dark bg-dark ">
+      <div class ="logo">
+   
+    <%= image_tag("logo.png", :alt => "rss feed") %>
+     </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

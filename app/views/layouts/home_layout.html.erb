@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>School</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+ <div class = "img"> 
+  <body>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+   <div class = "w">
+  <nav class="navbar nav">
+
+    <h1>  <a href="/students">All students</a></h1>
+    <h1>  <a href="/cohorts">All cohorts</a></h1>
+    <h1>  <a href="/users/sign_out">All instructors</a></h1>
+     <h1>  <a href="/users/sign_up">Login</a></h1>
+     </nav>
+     </div>
+       
+     <div class ="welcome">
+     <p>WELCOME TO</p>
+     <h1>• PRO SOCCER •</h1>
+     <p>Here you will find everything about the best game in the entire world.</p>
+     </div>
+    </div>
+   <div class = "pro">
+    <h1>live your dream and never wake up </h1>
+   </div>
+   <div class = "galery">
+    <% @images.each do |path| %>
+   
+   <%= image_tag "slide/#{ File.basename(path) }" , :class => "img"%>
+ <% end %>
+   </div>
+
+   <footer class="app-footer">
+  
+  <div class="ml-auto">
+     <% @images_icons.each do |path| %>
+   <%= image_tag "icon/#{ File.basename(path) }" , :class => "icon"%>
+ <% end %>
+  </div>
+</footer>
+
+   
+  </body>
+</html>
