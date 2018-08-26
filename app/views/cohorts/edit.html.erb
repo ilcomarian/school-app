@@ -1,3 +1,4 @@
+<div class = 'edit'>
 <%= form_with model: @cohorts do |form| %>
     <%= form.text_field :name, placeholder: "Enter name"%>
     <%= form.text_field :start_date, placeholder: "Enter start_date"%>
@@ -6,3 +7,4 @@
     <%= form.select :course_id,  Course.all.map {|x| [x.name,x.id ]}%>
     <%= form.submit %>
 <% end %>
+</div>

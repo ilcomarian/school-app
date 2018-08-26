@@ -23,6 +23,12 @@
         <p>ADMINISTRATION PANEL</p>
         <li>
 
+          <a href="/news">Add</a>
+
+        </li>
+        
+        <li>
+
           <a href="/students">All students</a>
 
         </li>
@@ -54,6 +60,8 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-align-justify"></i>
           </button>
+         <button type="button" class="btn btn-info"> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %></button>
+       
 
       </nav>
       <%= yield %>

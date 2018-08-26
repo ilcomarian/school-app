@@ -23,14 +23,17 @@ nav {
  
 
 .w {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+     
     .nav {
-        width: 50%;
+         margin-left:500px;
+         
+         
+        
         a {
+            margin-left:20px;
             font-size: 60%;
         }
+        
     }
 }
 
@@ -45,6 +48,7 @@ nav {
     p,h1 {
         text-shadow: -3px 2px black;
     }
+
 }
 
 .pro {
@@ -103,3 +107,22 @@ nav {
 }
 }
 
+.edit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.edit1{
+    
+    margin-left:70%;
+    margin-top:20%;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // height: 100%;
+    // align-items: center;
+  color:white;
+
+}

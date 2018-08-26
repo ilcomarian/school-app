@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   get 'home/index'
   root 'home#index'
-  get 'sign_up/index'
-  root 'sign_up#index'
+  get 'news', to:'news#index'
+ 
   resources :students
   resources :instructors
   resources :courses

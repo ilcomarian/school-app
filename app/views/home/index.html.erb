@@ -1,3 +1,27 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+</div>
+       
+     <div class ="welcome">
+     <p>WELCOME TO</p>
+     <h1>• PRO SOCCER •</h1>
+     <p>Here you will find everything about the best game in the entire world.</p>
+     </div>
+    </div>
+   <div class = "pro">
+    <h1>live your dream and never wake up </h1>
+   </div>
+   <div class = "galery">
+    <% @images.each do |path| %>
+   
+   <%= image_tag "slide/#{ File.basename(path) }" , :class => "img"%>
+ <% end %>
+   </div>
+    <footer class="app-footer">
+
+          <div class="ml-auto">
+            <% @images_icons.each do |path| %>
+              <%= image_tag "icon/#{ File.basename(path) }" , :class => "icon"%>
+                <% end %>
+          </div>
+        </footer>
+
  
