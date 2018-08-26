@@ -1,30 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>School</title>
-    <%= csrf_meta_tags %>
+
+<head>
+  <title>School</title>
+  <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
-  <nav class="navbar navbar-dark bg-dark">
- 
-    <h1>  <a href="/students">All students</a></h1>
-    <h1>  <a href="/cohorts">All cohorts</a></h1>
-    <h1>  <a href="/instructors">All instructors</a></h1>
-     <h1>  <a href="/courses">All courses</a></h1>
-     </nav>
-      <nav class="navbar navbar-dark bg-dark ">
-      <div class ="logo">
-   
-    <%= image_tag("logo.png", :alt => "rss feed") %>
-     </div>
+<body>
+
+  <div class="wrapper">
+
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <%= image_tag("logo.png", :alt => "rss feed") %>
+      </div>
+
+      <ul class="list-unstyled components">
+        <p>ADMINISTRATION PANEL</p>
+        <li>
+
+          <a href="/students">All students</a>
+
+        </li>
+        <li>
+          <a href="/cohorts">All cohorts</a>
+
+        </li>
+        <li>
+          <a href="/instructors">All instructors</a>
+        </li>
+        <li>
+          <a href="/courses">All courses</a>
+        </li>
+
     </nav>
-    <%= yield %>
-  </body>
+
+
+    <div id="content">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+          <button type="button" id="sidebarCollapse" class="navbar-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+          </button>
+
+      </nav>
+      <%= yield %>
+
+        <script type="text/javascript">
+          $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+              $('#sidebar').toggleClass('active');
+              $(this).toggleClass('active');
+            });
+          });
+        </script>
+</body>
+
 </html>
