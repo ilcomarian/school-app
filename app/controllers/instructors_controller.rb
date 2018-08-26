@@ -1,5 +1,5 @@
 class InstructorsController < ApplicationController
-    
+    before_action :authenticate_user!
     def index 
         @instructor = Instructor.all
     end
