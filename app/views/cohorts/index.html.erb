@@ -19,7 +19,7 @@
 <tr>
 
 <% @cohorts.each do |cohort| %>
- <tr>
+ <tr id = "cohort_<%=cohort.id%>" >
    <td> <%= cohort.id %> </td>
    <td> <%= cohort.name %>  </td>
    <td> <%= cohort.start_date %> </td>
@@ -27,7 +27,8 @@
    <td> <%= cohort.instructor_id %> </td>
    <td> <%= cohort.course_id %> </td>
    <td>  <a href="/cohorts/<%=cohort.id%>/edit">Edit</a></td>
-   <td>  <a href="/students/<%=cohort.id%>">delete</a></td>
+   <td><%= link_to 'Destroy',cohort_path(cohort), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, id: 'delete_cohot' %> 
+</td>
    </tr>
  
 <% end %>

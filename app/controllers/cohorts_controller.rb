@@ -31,9 +31,12 @@ class CohortsController < ApplicationController
         
     end
     
-    # def show
+    def destroy
+         @cohort = Cohort.find(params[:id])
+        # @cohort.destroy
 
-    # end
+        find_cohort.destroy
+    end
 
     private
    

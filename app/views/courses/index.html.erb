@@ -13,11 +13,12 @@
 
 
 <% @courses.each do |cours| %>
- <tr>
+ <tr id = "cours_<%=cours.id%>">
    <td> <%= cours.id %> </td>
    <td> <%= cours.name %>  </td>
    <td> <%= cours.total_hours %> </td>
-    <td>  <a href=" /courses/<%=cours.id%>/edit">Edit</a></td>
+   <td>  <a href=" /courses/<%=cours.id%>/edit">Edit</a></td>
+    <td><%= link_to 'Destroy',course_path(cours), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, id: 'delete_course' %> 
  
 <% end %>
 </tr>

@@ -24,15 +24,19 @@ class CoursesController < ApplicationController
         Course.create(course)
         redirect_to courses_path
     end
-    
-    def show
-
-    end
+    def destroy
+        
+        @course = Course.find(params[:id])
+       find_course.destroy
+   end
 
     private
    
     def course
       params.require(:course).permit(:name, :total_hours)
+    end
+    def find_course
+        @course = Course.find(params[:id])
     end
 
 end

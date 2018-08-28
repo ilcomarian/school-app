@@ -10,16 +10,16 @@
     </tr>
   </thead>
 <tbody>
-<tr>
+
 
 <% @students.each do |single_student| %>
- 
+ <tr id = "student_<%=single_student.id%>">
     <td><%= single_student.id %> </td>
    <td><%= single_student.first_name %> <%= single_student.last_name %></td>
    <td><%= single_student.age %> </td>
    <td><%= single_student.cohort_id %> </td>
     <td><a href=" /students/<%=single_student.id%>/edit">Edit</a></td>
-   <hr>
+   <td><%= link_to 'Destroy',student_path(single_student), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, id: 'delete_student' %> </td>
 
 <% end %>
  </tr>

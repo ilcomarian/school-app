@@ -28,9 +28,12 @@ class InstructorsController < ApplicationController
         
     end
 
-    # def show
+    def destroy
+        @instructor = Instructor.find(params[:id])
+       # @cohort.destroy
 
-    # end
+       find_instructor.destroy
+   end
 
     private
    
@@ -38,8 +41,8 @@ class InstructorsController < ApplicationController
       params.require(:instructor).permit(:first_name, :last_name, :age, :salary, :completed_education, :cohort_id)
     end
 
-    def find_student
-        @student = Student.find(params[:id])
+    def find_instructor
+        @instructor = Instructor.find(params[:id])
     end
 
 end

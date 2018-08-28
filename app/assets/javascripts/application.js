@@ -14,10 +14,11 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-//= require jquery3
+ 
 //= require popper
 //= require bootstrap 
-
+//= require jquery
+ 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
   }
