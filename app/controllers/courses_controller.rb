@@ -5,12 +5,12 @@ class CoursesController < ApplicationController
     end
     
     def edit
-        @courses = Course.find(params[:id]) 
+        @curent_course = Course.find(params[:id]) 
     end
 
     def update
-        @courses = Course.find(params[:id]) 
-        @courses.update(course)
+        @curent_course = Course.find(params[:id]) 
+        @curent_course.update(course)
         redirect_to courses_path
          
     end

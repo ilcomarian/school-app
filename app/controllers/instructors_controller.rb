@@ -12,8 +12,7 @@ class InstructorsController < ApplicationController
     def update
         @curent_instructor= Instructor.find(params[:id])
         @curent_instructor.update(instructor_params)
-        redirect_to instructors_path
-         
+        redirect_to instructors_path 
     end
 
 

@@ -22,15 +22,16 @@ class StudentsController < ApplicationController
     def edit
 
         @curent_student = Student.find(params[:id])
-        @cohort = Cohort.all 
+        
     end
 
     def update
-
         @curent_student = Student.find(params[:id])
         @curent_student.update(student_params)
-        redirect_to students_path
-
+        respond_to do |format|
+            format.html { redirect_to students_path }
+            format.json  { render :json => {success: true} } # don't do msg.to_json
+        end
     end
 
     def destroy
@@ -39,10 +40,14 @@ class StudentsController < ApplicationController
     end
 
 
-    def show
-        redirect_to students_path
-    end
- 
+    # def show
+    #     redirect_to students_path
+    # end
+
+    # def update
+    #     @student = Student.find(params[:id])
+    #     @student.update(student_params)
+    #   end
      
 
     private

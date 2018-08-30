@@ -21,7 +21,8 @@
    <td> <%= instructor.salary %> </td>
    <td> <%= instructor.completed_education %> </td>
    <td>  <%= instructor.cohort_id%> </td>
-    <td>  <a href=" /instructors/<%=instructor.id%>/edit">Edit</a></td>
+   <td><%= link_to 'Edit', edit_instructor_path(instructor), remote: true   %></td>
+     
     <td><%= link_to 'Destroy',instructor_path(instructor), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, id: 'delete_instructor' %> </td>
  </tr>
 <% end %>

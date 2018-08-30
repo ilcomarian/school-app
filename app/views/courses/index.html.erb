@@ -1,3 +1,7 @@
+
+  <div id = "course" style ="display:none;"> 
+</div>
+
 <table class="table table-dark mx-auto w-75 " style ="margin-top:10%">
  <thead>
     <tr>
@@ -13,16 +17,20 @@
 
 
 <% @courses.each do |cours| %>
- <tr id = "cours_<%=cours.id%>">
+ <tr id = "course_<%=cours.id%>">
    <td> <%= cours.id %> </td>
    <td> <%= cours.name %>  </td>
    <td> <%= cours.total_hours %> </td>
-   <td>  <a href=" /courses/<%=cours.id%>/edit">Edit</a></td>
-    <td><%= link_to 'Destroy',course_path(cours), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, id: 'delete_course' %> 
+ 
+   <td><%= link_to 'Edit', edit_course_path(cours), remote: true   %></td>
+
+   <td><%= link_to 'Destroy',course_path(cours), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, id: 'delete_course' %> 
  
 <% end %>
 </tr>
 </tbody>
 </table>
 
- </div>
+
+
+

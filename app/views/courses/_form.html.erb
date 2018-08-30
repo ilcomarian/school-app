@@ -1,0 +1,16 @@
+ 
+        <%= form_with model:  @curent_course  do |form| %>
+
+
+                <td>
+                        <%= form.text_field :name, placeholder: "name"%>
+                </td>
+                <td>
+                        <%= form.text_field :total_hours, placeholder: "total_hours"%>
+                </td>
+                <td>
+                        <%= form.submit %>
+                </td>
+
+                <% end %>
+ 

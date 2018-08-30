@@ -1,13 +1,1 @@
-<div class = 'edit'>
-<%= form_with model:   @curent_instructor  do |form| %>
-    <%= form.text_field :first_name, placeholder: "form.first_name"%>
-    <%= form.text_field :last_name, placeholder: "last_name"%>
-   
-    <%=form.select :age , (21..149)  %>
-    <%= form.select :salary, (0..1000) %>
-     
-     <%= form.select :completed_education, Instructor.highest_edus.keys %>
-     <%= form.select :cohort_id,  Cohort.all.map {|x| [x.name,x.id ]} %>
-    <%= form.submit %>
-<% end %>
-</div>
+ <%= render 'form', instructor: @curent_instructor  %> 

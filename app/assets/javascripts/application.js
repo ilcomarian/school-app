@@ -11,13 +11,14 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
 //= require activestorage
 //= require turbolinks
 //= require_tree .
  
 //= require popper
 //= require bootstrap 
-//= require jquery
+let form;
  
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
