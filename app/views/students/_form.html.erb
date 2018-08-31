@@ -1,5 +1,4 @@
- 
-<div class =  'student<%= @curent_student.id%>' >
+ <div class =  'student<%= @curent_student.id%>' >
 <%= form_with model:   @curent_student  do |form| %>
 
 <td><%=@curent_student.id%></td>
@@ -9,7 +8,12 @@
     <td><%= form.select :cohort_id,  Cohort.all.map {|x| [x.name,x.id ]} %></td>
     
    <td> <%= form.submit %></td>
- 
+    
+  
+
+
+  
 <% end %>
 </div>
+ 
  
