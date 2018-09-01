@@ -20,7 +20,7 @@ class StudentsController < ApplicationController
     end
     
     def edit
-
+        @curse = Cohort.all;
         @curent_student = Student.find(params[:id])
         
     end

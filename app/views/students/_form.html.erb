@@ -1,15 +1,31 @@
- <div class =  'student<%= @curent_student.id%>' >
-<%= form_with model:   @curent_student  do |form| %>
-
+<tr id = "row">
 <td><%=@curent_student.id%></td>
-    <td><%= form.text_field :first_name, placeholder: "form.first_name"%></td>
-    <td><%= form.text_field :last_name, placeholder: "form.last_name"%></td>
-   <td> <%= form.select :age, (18..149)%></td>
-    <td><%= form.select :cohort_id,  Cohort.all.map {|x| [x.name,x.id ]} %></td>
+<td><input type = "text"  placeholder= "<%=@curent_student.first_name%>" id ="first-name"> </td>
+<td><input type = "text" id ="last_name"  placeholder= "<%=@curent_student.last_name%>"></td>
+<td  ><%= form_with model:   @curent_student  do |form| %>
+<%= form.select :cohort_id,  Cohort.all.map {|x| [x.name,x.id ]} ,id:"cohort_id" %>
+<%end%>
+
+  
+
+     
+</td>
+<td><input type = "text" id ="age"></td>
+ 
+ <td><button onclick = "extract()">submit</button></td>
+<td  style = "display:none" > 
+    <%= form_with model:   @curent_student  do |form| %>
+    <%= form.text_field :first_name, id: "rfirst-name", placeholder: "form.first_name"%>
+    <%= form.text_field :last_name, id: "rlast_name", placeholder: "form.last_name"%>
+    <%= form.select :age, (18..149),id: "rage"%>
+    <%= form.select :cohort_id,  Cohort.all.map {|x| [x.name,x.id ]} , id: "rcohort_id" %>
     
-   <td> <%= form.submit %></td>
+    <%= form.submit "submit", id:"sub" %></td>
      
 <% end %>
-</div>
+</tr>
+  
+
+ 
  
  
