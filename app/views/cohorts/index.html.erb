@@ -1,42 +1,55 @@
-  <div id = "cohort"> </div>
+<div id="cohort"> </div>
 
 
 
-<table class="table table-dark mx-auto w-75 " style ="margin-top:10%">
- <thead>
+<table class="table table-dark mx-auto w-75 " style="margin-top:10%">
+  <thead>
     <tr>
       <th scope="col">id</th>
       <th scope="col">name</th>
-      <th scope="col">start_date</th>
-      <th scope="col">end_date</th>
-      <th scope="col">instructor_id</th>
-      <th scope="col">course_id</th>
+      <th scope="col">start date</th>
+      <th scope="col">end date</th>
+      <th scope="col">instructor</th>
+      <th scope="col">course</th>
       <th scope="col">edit</th>
       <th scope="col">delete</th>
     </tr>
   </thead>
-<tbody>
-<tr>
+  <tbody>
+    <tr>
 
-<% @cohorts.each do |cohort| %>
- <tr id = "cohort_<%=cohort.id%>" >
-    <td> <%= cohort.id %> </td>
-    <td> <%= cohort.name %>  </td>
-    <td> <%= cohort.start_date %> </td>
-    <td> <%= cohort.end_date %> </td>
-    <td> <%= cohort.instructor_id %> </td>
-    <td> <%= cohort.course_id %> </td>
-    <td><%= link_to 'Edit', edit_cohort_path(cohort), remote: true   %></td>
+      <% @cohorts.each do |cohort| %>
+    <tr id="cohort_<%=cohort.id%>">
+      <td>
+        <%= cohort.id %>
+      </td>
+      <td>
+        <%= cohort.name %>
+      </td>
+      <td>
+        <%= cohort.start_date %>
+      </td>
+      <td>
+        <%= cohort.end_date %>
+      </td>
+      <td>
+        <%= Instructor.find(cohort.instructor_id).first_name%>
+      </td>
+      <td>
+        <%= Course.find(cohort.course_id).name %>
+      </td>
+      <td>
+        <%= link_to 'Edit', edit_cohort_path(cohort), remote: true   %>
+      </td>
 
-   <td><%= link_to 'Destroy',cohort_path(cohort), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, id: 'delete_cohot' %> 
-</td>
-   </tr>
- 
-<% end %>
+      <td>
+        <%= link_to 'Destroy',cohort_path(cohort), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, id: 'delete_cohot' %>
+      </td>
+    </tr>
 
-
-</tr>
- </tbody>
+    <% end %>
+    </tr>
+  </tbody>
 </table>
 
- </div>
+</div>

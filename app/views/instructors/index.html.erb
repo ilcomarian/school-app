@@ -8,7 +8,7 @@
       <th scope="col">age</th>
       <th scope="col">salary</th>
       <th scope="col">education</th>
-      <th scope="col">cohort_id</th>
+      <th scope="col">cohort</th>
       <th scope="col">edit</th>
       <th scope="col">delete</th>
     </tr>
@@ -22,7 +22,7 @@
    <td> <%= instructor.age %> </td>
    <td> <%= instructor.salary %> </td>
    <td> <%= instructor.completed_education %> </td>
-   <td>  <%= instructor.cohort_id%> </td>
+   <td>  <%= Cohort.find(instructor.cohort_id).name%> </td>
    <td><%= link_to 'Edit', edit_instructor_path(instructor), remote: true   %></td>
      
     <td><%= link_to 'Destroy',instructor_path(instructor), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, id: 'delete_instructor' %> </td>
