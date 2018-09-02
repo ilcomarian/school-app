@@ -2,8 +2,9 @@
 console.log('I am hitting the js file for edit')
 
  console.log(<%= @curent_student.id %>)
-student = document.getElementById('student_<%= @curent_student.id %>')
+ 
 
-console.log("Current task clicked " + student.innerText)
+
 
 $(student).replaceWith("<%= j (render 'form') %>");
+ 

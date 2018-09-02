@@ -1,9 +1,25 @@
  
+<div class = "edit-s">
+     <div class= "mx-auto w-75" > 
+     <table class="table table-dark  "  >
+ <thead>
+    <tr>
+       
+      <th scope="col">name</th>
+      <th scope="col" class="text-center">total_hours</th>
+      <th scope="col">edit</th>
+      
+    </tr>
+  </thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
 
-        <div   style="display: none">
         <%= form_with model:  @curent_course do |form|  %>
 
-           <td>
+         
                 
                         <%= form.text_field :name, placeholder: "name"%>
                 
@@ -12,7 +28,8 @@
                
              
                         <%= form.submit %>
-                </td>
+             
 
                 <% end %>
+ </div>
  </div>

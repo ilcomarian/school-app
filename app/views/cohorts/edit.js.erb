@@ -3,8 +3,5 @@ console.log('I am hitting the js file for edit')
 
  console.log(<%= @curent_cohort.id %>)
   
- cohort = document.getElementById('cohort_<%= @curent_cohort.id %>')
-console.log(cohort.innerText)
-<%# console.log("Current task clicked " + course.innerText) %>
 
 $(cohort).replaceWith("<%= j (render 'form') %>");

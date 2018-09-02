@@ -1,10 +1,33 @@
-<div id = 'cohort_<%=@curent_cohort.id%>'>
-<%= form_with model: @curent_cohort do |form| %>
-    <%= form.text_field :name, placeholder: "Enter name"%>
-    <%= form.text_field :start_date, placeholder: "Enter start_date"%>
-    <%= form.text_field :end_date, placeholder: "Enter end_date"%>
-    <%= form.select :instructor_id,  Instructor.all.map {|x| [x.first_name,x.id ]}%>
-    <%= form.select :course_id,  Course.all.map {|x| [x.name,x.id ]}%>
-    <%= form.submit %>
-<% end %>
+<div class="edit-s" style="margin-left:20%;">
+    <div>
+        <table class="table table-dark" style= "width:57%">
+            <thead>
+                <tr>
+                    <th scope="col">name</th>
+                    <th scope="col" class="text-right">start date</th>
+                    <th scope="col" class="text-right" >end date</th>
+                    <th scope="col" class="text-right">instructor</th>
+                    <th scope="col" >course</th>
+                    <th scope="col" >edit</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <%= form_with model: @curent_cohort do |form| %>
+        <%= form.text_field :name, placeholder: "Enter name"%>
+        <%= form.text_field :start_date, placeholder: "Enter start_date"%>
+        <%= form.text_field :end_date, placeholder: "Enter end_date"%>
+        <%= form.select :instructor_id,  Instructor.all.map {|x| [x.first_name,x.id ]}%>
+        <%= form.select :course_id,  Course.all.map {|x| [x.name,x.id ]}%>
+        <%= form.submit %>
+        <% end %>
+    </div>
 </div>
+
+ 
