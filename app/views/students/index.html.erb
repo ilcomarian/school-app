@@ -1,0 +1,34 @@
+<div id = "student"></div>
+
+<table class="table table-dark mx-auto w-75 " style ="margin-top:10%">
+ <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">first name</th>
+      <th scope="col">last name</th>
+      <th scope="col">age</th>
+      <th scope="col">cohort</th>
+      <th scope="col">edit</th>
+      <th scope="col">delete</th>
+    </tr>
+  </thead>
+<tbody>
+
+
+<% @students.each  do |single_student| %>
+ <tr id = "student_<%=single_student.id%>">
+    <td><%= single_student.id %> </td>
+   <td><%= single_student.first_name %> </td>
+   <td><%= single_student.last_name %></td>
+   <td><%= single_student.age %> </td>
+   <td><%= Cohort.find(single_student.cohort_id).name %> </td>
+<td><%= link_to 'Edit', edit_student_path(single_student), remote: true   %></td>
+ <td><%= link_to 'Destroy',student_path(single_student), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, id: 'delete_student' %> </td>
+
+<% end %>
+ </tr>
+</tr>
+</tbody>
+</table>
+
+ </div>

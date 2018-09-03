@@ -1,0 +1,3 @@
+console.log('this is not working'+  <%= @curent_instructor.id%> )
+
+$('#instructor_<%= @curent_instructor.id').replaceWith('<%= j render partial: "instructor", locals: {instructor: @curent_instructor} %>'); %>
