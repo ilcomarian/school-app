@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>School</title>
+  <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<div class="img fadeIn">
+
+  <body>
+    <p class="notice">
+      <%= notice %>
+    </p>
+    <p class="alert">
+      <%= alert %>
+    </p>
+    <div class="w">
+
+
+        <nav class="text-center"> 
+
+        <h1>
+        <span class="navbar-text">  <a href="/">Home</a> </span>
+         
+        </h1>
+        <h1>
+           <span class="navbar-text"> <a href="/users/sign_up">Sign up</a></span>
+        </h1>
+         
+        <h1>
+           <span class="navbar-text"> <a href="/users/sign_in">Sign in</a></span>
+        </h1>
+      </nav>
+
+      <%= yield %>
+
+       
+  </body>
+
+</html>

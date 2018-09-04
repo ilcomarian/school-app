@@ -1,0 +1,37 @@
+<div class="edit-s" style = "margin-left:27%;" >
+    <div class="mx-auto">
+        <table class="table table-dark  ">
+            <thead>
+                <tr>
+
+                    <th scope="col">first name</th>
+                    <th scope="col">last name</th>
+                    <th scope="col">age</th>
+                    <th scope="col">cohort</th>
+                    <th scope="col">edit</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                </tr>
+            </tbody>
+        </table>
+
+        
+            <%= form_with model:   @curent_student  do |form| %>
+            <%= form.text_field :first_name, id: "rfirst-name", placeholder: "form.first_name"%>
+            <%= form.text_field :last_name, id: "rlast_name", placeholder: "form.last_name"%>
+            <%= form.select :age, (4..16),id: "rage"%>
+            <%= form.select :cohort_id,  Cohort.all.map {|x| [x.name,x.id ]} , id: "rcohort_id" %>
+
+            <%= form.submit "submit", id:"sub" %>
+       
+
+        <% end %>
+        </tr>
+
+
+
+    </div>
+</div>

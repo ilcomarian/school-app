@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>School</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <a href="/news">Add</a>
+    <a href="/students">All students</a>
+    <a href="/cohorts">All cohorts</a>
+    <a href="/instructors">All instructors</a>
+    <a href="/courses">All courses</a>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      <% if current_page?(news_path) %>
+      <h3>add new</h3>
+      <% end %>
+      <% if current_page?(students_path) %>
+      <h3>students</h3>
+      <% end %>
+      <% if current_page?(cohorts_path) %>
+      <h3>cohorts</h3>
+      <% end %>
+      <% if current_page?(instructors_path) %>
+      <h3>instructors</h3>
+      <% end %>
+      <% if current_page?(courses_path) %>
+      <h3>courses</h3>
+      <% end %>
+
+      <button type="button" class="btn btn-info">
+        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+      </button>
+  </nav>
+
+  <%= yield %>
+
+
+</body>
+
+</html>
