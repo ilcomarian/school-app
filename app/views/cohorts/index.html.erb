@@ -36,7 +36,7 @@
         <%= Instructor.find(cohort.instructor_id).first_name%>
       </td>
       <td>
-        <%= Course.find(cohort.course_id).name %>
+        <%= cohort.course_id %>
       </td>
       <td>
         <%= link_to 'Edit', edit_cohort_path(cohort), remote: true   %>
