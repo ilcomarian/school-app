@@ -1,24 +1,23 @@
-# README
+ # Demo Log in: test@gmail.com password: test123
+ 
+ ## Administrative Dashboard for a fictitious Soccer School
+ 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Create Students, Instructors, Cohorts and Courses.
+Add/Remove Instructors and Students to/from Courses.
+Add/Remove Cohorts to/from Courses.
 
-* Ruby version
 
-* System dependencies
+## Environment
 
-* Configuration
+Ruby on Rails
+SASS framework
+Bootstrap for cards and grid
+PostgreSQL/Active Record for relational DB design
+Devise for simple user authentication
+BCrypt password encryption
+deployed to Heroku
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## How To Use
