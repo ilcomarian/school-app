@@ -1,7 +1,7 @@
  # Demo Log in: test@gmail.com password: test123
  ![screenshot](1.png)
  ![screenshot](2.png)
- ![screenshot](3.png)
+
  ## Administrative Dashboard for a fictitious Soccer School
  
 
